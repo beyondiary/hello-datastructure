@@ -43,5 +43,11 @@ public class Basic {
 
         array.removeLast();
         System.out.println(array);
+
+        GenericArray<Integer> genericArray = new GenericArray<>();
+        for (int i = 0; i < 10; i++) {
+            genericArray.addLast(i);
+        }
+        System.out.println(genericArray);
     }
 }
