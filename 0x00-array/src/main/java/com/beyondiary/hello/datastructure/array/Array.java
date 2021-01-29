@@ -30,6 +30,59 @@ public class Array {
         return 0 == size;
     }
 
+    public boolean contains(int e){
+        for (int i = 0; i < size; i++) {
+            if(data[i] == e){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int find(int e){
+        for (int i = 0; i < size; i++) {
+            if(data[i] == e){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int remove(int index){
+        if(index < 0 || index >=size){
+            throw new IllegalArgumentException("index illegal");
+        }
+        int ret = data[index];
+        for (int i = index + 1; i < size; i++) {
+            data[i -1] = data[i];
+        }
+        size--;
+        return ret;
+    }
+
+    public int removeFirst(){
+        return remove(0);
+    }
+
+    public int removeLast(){
+        return remove(size);
+    }
+
+    public void removeElement(int e){
+        int index = find(e);
+        if(index != -1){
+            remove(index);
+        }
+    }
+
+    public void removeAllElement(int e){
+        int index = find(e);
+        while (index != - 1){
+            remove(index);
+            index = find(e);
+        }
+    }
+
     public void addLast(int e){
         /*
         if(size == data.length){

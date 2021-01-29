@@ -29,7 +29,19 @@ public class Basic {
         System.out.println(array);
         array.add(1, 100);
         System.out.println(array);
-        array.addLast(99);
+        array.addLast(5);
+        System.out.println(array);
+
+        array.remove(2);
+        System.out.println(array);
+
+        array.removeAllElement(5);
+        System.out.println(array);
+
+        array.removeFirst();
+        System.out.println(array);
+
+        array.removeLast();
         System.out.println(array);
     }
 }
